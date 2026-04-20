@@ -1,66 +1,96 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram, ArrowRight } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12 border-t border-border mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="col-span-1 md:col-span-2">
-          <Link href="/" className="text-2xl font-bold tracking-tight">
-            Garvit<span className="text-blue-500">.</span>
-          </Link>
-          <p className="mt-4 text-muted-foreground max-w-sm">
-            Helping Brands Grow with Data-Driven Digital Marketing. Let&apos;s create something amazing together.
-          </p>
-          <div className="flex gap-4 mt-6">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="sr-only">LinkedIn</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="sr-only">Twitter</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="sr-only">GitHub</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-            </a>
+    <footer className="bg-card border-t border-border pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+          <div className="col-span-1 md:col-span-2 space-y-8">
+            <Link href="/" className="text-3xl font-black tracking-tight flex items-center gap-2">
+              Digital<span className="text-blue-500">Garvit</span>
+            </Link>
+            <p className="text-muted-foreground text-lg max-w-sm leading-relaxed">
+              Transforming businesses through data-driven digital marketing and strategic growth engineering. Based in India, serving globally.
+            </p>
+            <div className="flex gap-4">
+              {[
+                { icon: <Linkedin />, name: "LinkedIn" },
+                { icon: <Twitter />, name: "Twitter" },
+                { icon: <Instagram />, name: "Instagram" },
+                { icon: <Github />, name: "GitHub" },
+              ].map((social, i) => (
+                <a 
+                  key={i} 
+                  href="#" 
+                  className="p-3 rounded-full bg-muted hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <span className="sr-only">{social.name}</span>
+                  {React.cloneElement(social.icon as React.ReactElement, { className: "h-5 w-5" })}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-bold mb-8">Navigation</h3>
+            <ul className="space-y-4">
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Me", href: "/about" },
+                { name: "Services", href: "/services" },
+                { name: "Portfolio", href: "/portfolio" },
+                { name: "Contact", href: "/contact" }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-muted-foreground hover:text-blue-500 transition-colors flex items-center gap-2 group">
+                    <ArrowRight className="h-3 w-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-8">Get In Touch</h3>
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4">
+                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500">
+                  <Mail className="h-4 w-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-muted-foreground uppercase">Email</span>
+                  <a href="mailto:digitalgarvits@gmail.com" className="font-medium hover:text-blue-500 transition-colors">digitalgarvits@gmail.com</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500">
+                  <Phone className="h-4 w-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-muted-foreground uppercase">Phone</span>
+                  <a href="tel:+919992221576" className="font-medium">+91 9992221576</a>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         
-        <div>
-          <h3 className="font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
-            <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
-            <li><Link href="/services" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link></li>
-            <li><Link href="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors">Portfolio</Link></li>
-            <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
-          </ul>
+        <div className="pt-12 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <p>&copy; {new Date().getFullYear()} Digital Garvit.</p>
+            <span className="w-1 h-1 rounded-full bg-border md:block hidden" />
+            <p>Made with passion for growth.</p>
+          </div>
+          <div className="flex gap-8">
+            <Link href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-blue-500 transition-colors">Terms of Service</Link>
+          </div>
         </div>
-
-        <div>
-          <h3 className="font-semibold mb-4">Contact</h3>
-          <ul className="space-y-4">
-            <li className="flex items-center gap-3 text-muted-foreground">
-              <Mail className="h-4 w-4" />
-              <a href="mailto:digitalgarvits@gmail.com" className="hover:text-foreground">digitalgarvits@gmail.com</a>
-            </li>
-            <li className="flex items-center gap-3 text-muted-foreground">
-              <Phone className="h-4 w-4" />
-              <span>9992221576</span>
-            </li>
-            <li className="flex items-start gap-3 text-muted-foreground">
-              <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-              <span>305/18 Dogran Mohalla, Hisar, Haryana</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Garvit. All rights reserved.</p>
-        <p className="mt-2 md:mt-0">Designed & Built to Scale.</p>
       </div>
     </footer>
   )
 }
+
+import React from "react"
