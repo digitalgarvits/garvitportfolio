@@ -22,7 +22,7 @@ export default function About() {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
         <p className="text-xl text-muted-foreground">
-          I'm a passionate Digital Marketing Specialist with a track record of driving growth and building impactful online presences.
+          I&apos;m a passionate Digital Marketing Specialist with a track record of driving growth and building impactful online presences.
         </p>
       </motion.div>
 

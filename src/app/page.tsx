@@ -1,11 +1,11 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, BarChart, Target, TrendingUp } from "lucide-react"
 
 export default function Home() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,7 +15,7 @@ export default function Home() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -50,7 +50,7 @@ export default function Home() {
             </span> Digital Marketing
           </motion.h1>
           <motion.p variants={itemVariants} className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            I'm Garvit, a Digital Marketing Specialist dedicated to scaling businesses through innovative strategies, SEO, and performance marketing.
+            I&apos;m Garvit, a Digital Marketing Specialist dedicated to scaling businesses through innovative strategies, SEO, and performance marketing.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/portfolio" className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background font-medium hover:scale-105 transition-transform flex items-center justify-center gap-2">
@@ -93,7 +93,7 @@ export default function Home() {
       <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Expertise That Drives Results</h2>
-          <p className="text-xl text-muted-foreground">Comprehensive digital solutions tailored to elevate your brand's online presence and maximize ROI.</p>
+          <p className="text-xl text-muted-foreground">Comprehensive digital solutions tailored to elevate your brand&apos;s online presence and maximize ROI.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-90" />
         <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to scale your business?</h2>
-          <p className="text-xl text-blue-100 mb-10">Let's discuss how we can work together to achieve your growth objectives.</p>
+          <p className="text-xl text-blue-100 mb-10">Let&apos;s discuss how we can work together to achieve your growth objectives.</p>
           <Link href="/contact" className="px-8 py-4 rounded-full bg-white text-blue-900 font-bold hover:scale-105 transition-transform flex items-center gap-2">
             Start a Conversation <ArrowRight className="h-4 w-4" />
           </Link>
