@@ -37,9 +37,9 @@ export default function Contact() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-3xl mx-auto text-center mb-20"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Let&apos;s Connect</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h1>
         <p className="text-xl text-muted-foreground">
-          Ready to take your digital presence to the next level? Get in touch and let&apos;s discuss how we can help you grow.
+          Ready to take your digital presence to the next level? Get in touch and let's discuss how we can help you grow.
         </p>
       </motion.div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                 <Send className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold">Message Sent!</h3>
-              <p className="text-muted-foreground">Thank you for reaching out. I&apos;ll get back to you within 24 hours.</p>
+              <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you within 24 hours.</p>
               <button onClick={() => setIsSubmitted(false)} className="text-blue-500 font-semibold hover:underline mt-4">
                 Send another message
               </button>

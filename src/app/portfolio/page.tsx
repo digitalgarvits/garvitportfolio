@@ -9,7 +9,7 @@ export default function Portfolio() {
     {
       title: "E-commerce Growth Campaign",
       category: "Performance Marketing",
-      description: "Scaled an emerging D2C brand&apos;s revenue by 300% through highly optimized Meta and Google Ads funnels.",
+      description: "Scaled an emerging D2C brand's revenue by 300% through highly optimized Meta and Google Ads funnels.",
       metrics: ["300% ROAS", "-45% CPA", "2M+ Impressions"],
       color: "from-pink-500 to-rose-500"
     },
@@ -46,7 +46,7 @@ export default function Portfolio() {
         <span className="text-blue-500 font-semibold tracking-wider uppercase mb-2 block">Featured Work</span>
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Success Stories</h1>
         <p className="text-xl text-muted-foreground">
-          Explore how I&apos;ve helped businesses achieve unprecedented growth through strategic digital marketing.
+          Explore how I've helped businesses achieve unprecedented growth through strategic digital marketing.
         </p>
       </motion.div>
 

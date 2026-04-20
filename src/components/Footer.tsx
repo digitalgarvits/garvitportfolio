@@ -10,7 +10,7 @@ export function Footer() {
             Garvit<span className="text-blue-500">.</span>
           </Link>
           <p className="mt-4 text-muted-foreground max-w-sm">
-            Helping Brands Grow with Data-Driven Digital Marketing. Let&apos;s create something amazing together.
+            Helping Brands Grow with Data-Driven Digital Marketing. Let's create something amazing together.
           </p>
           <div className="flex gap-4 mt-6">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
