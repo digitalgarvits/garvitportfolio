@@ -1,5 +1,6 @@
+import React from "react"
 import Link from "next/link"
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram, ArrowRight } from "lucide-react"
+import { Mail, Phone, Linkedin, Twitter, Github, Instagram, ArrowRight } from "lucide-react"
 
 export function Footer() {
   return (
@@ -92,5 +93,3 @@ export function Footer() {
     </footer>
   )
 }
-
-import React from "react"

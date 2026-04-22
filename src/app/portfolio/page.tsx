@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowUpRight, CheckCircle2, Globe, TrendingUp, Search } from "lucide-react"
+import { ArrowUpRight, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
@@ -95,7 +95,7 @@ export default function Portfolio() {
 
       <div className="grid grid-cols-1 gap-16">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <motion.div
               layout
               key={project.title}

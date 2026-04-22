@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Plus, Minus, Globe, MessageSquare, Briefcase } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Plus, Minus, Globe, MessageSquare, Briefcase, CheckCircle2, Search } from "lucide-react"
 import React, { useState } from "react"
 
 export default function Contact() {

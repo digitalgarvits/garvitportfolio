@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle2, Award, Calendar, Coffee, Book, Target, Zap, Heart } from "lucide-react"
+import { Award, Calendar, Coffee, Book, Target, Zap, Heart } from "lucide-react"
 
 export default function About() {
   const skills = [
