@@ -14,10 +14,10 @@ export default function About() {
   ]
 
   const milestones = [
-    { year: "2019", title: "Started My Journey", desc: "First steps into the world of digital marketing with a focus on SEO." },
-    { year: "2020", title: "Certifications & Mastery", desc: "Became Google Ads and HubSpot certified, managing first $10k ad budget." },
-    { year: "2021", title: "D2C Scaling Specialist", desc: "Helped 5+ local brands scale to 7-figure annual revenue." },
-    { year: "2023", title: "Digital Garvit Brand Launch", desc: "Established my own consultancy focused on high-performance marketing." },
+    { year: "2025", title: "Started My Journey", desc: "First steps into the world of digital marketing with a focus on SEO." },
+    { year: "2025", title: "Certifications & Mastery", desc: "Became Google Ads and HubSpot certified, managing first $10k ad budget." },
+    { year: "2026", title: "D2C Scaling Specialist", desc: "Helped 5+ local brands scale to 7-figure annual revenue." },
+    { year: "2026", title: "Digital Garvit Brand Launch", desc: "Established my own consultancy focused on high-performance marketing." },
   ]
 
   return (
@@ -57,7 +57,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 gap-6 pt-6">
             <div className="p-6 rounded-3xl bg-muted/50 border border-border">
-              <h4 className="text-3xl font-bold mb-1">5+</h4>
+              <h4 className="text-3xl font-bold mb-1">2+</h4>
               <p className="text-sm font-medium text-muted-foreground">Years Experience</p>
             </div>
             <div className="p-6 rounded-3xl bg-muted/50 border border-border">
